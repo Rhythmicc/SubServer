@@ -23,7 +23,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=True,
-    install_requires=["Qpro"],
+    install_requires=["Qpro", "fastapi", "uvicorn", "apscheduler"],
     entry_points={
         "console_scripts": [
             f"{executable_name} = {name}.main:main",
