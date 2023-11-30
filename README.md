@@ -15,10 +15,4 @@ pip3 install git+https://github.com/Rhythmicc/SubServer.git -U
 SubServer serv
 ```
 
-## Developer
-
-If you need use global config, just edit `__config__.py`:
-
-1. make `enable_config = True`.
-2. edit `questions` list.
-3. using `config` at `main.py`.
+![](https://cos.rhythmlian.cn/ImgBed/10b18c9884b6764cb5ec105160eff40d.png)
