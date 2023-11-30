@@ -15,7 +15,7 @@ questions = {
     "port": {
         "type": "input",
         "message": "Port",
-        "default": 8080
+        "default": "8080"
     },
     "airports": {
         "type": "checkbox",
@@ -25,7 +25,7 @@ questions = {
     "interval": {
         "type": "input",
         "message": "Interval (hours)",
-        "default": 1
+        "default": "1"
     },
 }
 
