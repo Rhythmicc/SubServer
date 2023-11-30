@@ -1,6 +1,6 @@
 # SubServer
 
-FastAPI with sub-clash, support update config, and get config url wrapped.
+FastAPI with [sub-clash](https://github.com/Rhythmicc/sub-clash), support update config, and get config url wrapped.
 
 ## Install
 
