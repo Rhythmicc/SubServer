@@ -10,6 +10,8 @@ if enable_config:
     config = SubServerConfig()
 
 import sys
+import asyncio
+import aioschedule as schedule
 from QuickProject import user_pip, _ask, external_exec, QproDefaultStatus
 
 
@@ -66,7 +68,7 @@ def requirePackage(
         return eval(f"{module if module else pname}")
 
 
-def _update(airport: str):
+async def _update(airport: str):
     """
     更新配置文件
 

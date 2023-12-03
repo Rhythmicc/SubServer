@@ -15,18 +15,19 @@ def serv(port: int = 8080):
     from .serv import serv
     from uvicorn import run
 
-    from apscheduler.schedulers.asyncio import AsyncIOScheduler
-    from apscheduler.triggers.interval import IntervalTrigger
+    # from apscheduler.schedulers.asyncio import AsyncIOScheduler
+    # from apscheduler.triggers.interval import IntervalTrigger
 
-    scheduler = AsyncIOScheduler()
-    trigger = IntervalTrigger(hours=int(config.select('interval')))
-    for i in config.select('airports'):
-        scheduler.add_job(_update, trigger, args=[i])
-    scheduler.start()
+    # scheduler = AsyncIOScheduler()
+    # trigger = IntervalTrigger(hours=int(config.select('interval')))
+    # for i in config.select('airports'):
+    #     scheduler.add_job(_update, trigger, args=[i])
+    # scheduler.start()
+    # app_startup()
 
     run(serv, port=int(config.select('port')), host=config.select('host'))
 
-    scheduler.shutdown()
+    # scheduler.shutdown()
 
 
 def main():
