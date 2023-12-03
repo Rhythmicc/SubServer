@@ -10,8 +10,6 @@ if enable_config:
     config = SubServerConfig()
 
 import sys
-import asyncio
-import aioschedule as schedule
 from QuickProject import user_pip, _ask, external_exec, QproDefaultStatus
 
 
@@ -66,18 +64,3 @@ def requirePackage(
             exit(-1)
     finally:
         return eval(f"{module if module else pname}")
-
-
-async def _update(airport: str):
-    """
-    更新配置文件
-
-    :param airport: 机场名
-    """
-    import pickle
-
-    QproDefaultConsole.print(QproInfoString, "AUTO UPDATE", f"Updating {airport}...")
-    header = requirePackage(f'sub_clash.main', 'app', real_name=f'git+https://github.com/Rhythmicc/sub-clash.git').real_call('update', airport, force=True, disable_txcos=True)
-    header = header.headers['subscription-userinfo']
-    with open(f'{airport}.header', 'wb') as f:
-        pickle.dump(header, f)
